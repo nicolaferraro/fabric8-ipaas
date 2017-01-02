@@ -1,0 +1,7 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    fabric8.io/iconUrl: "https://cdn.rawgit.com/nicolaferraro/fabric8-ipaas/oshinko/oshinko/src/main/fabric8/icon.png"
+  name: oshinko-spark-driver-config

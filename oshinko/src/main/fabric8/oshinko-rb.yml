@@ -1,0 +1,9 @@
+metadata:
+  name: ${NAMESPACE}:oshinko
+  annotations:
+    fabric8.io/iconUrl: "https://cdn.rawgit.com/nicolaferraro/fabric8-ipaas/oshinko/oshinko/src/main/fabric8/icon.png"
+roleRef:
+  name: admin
+subjects:
+- kind: ServiceAccount
+  name: oshinko

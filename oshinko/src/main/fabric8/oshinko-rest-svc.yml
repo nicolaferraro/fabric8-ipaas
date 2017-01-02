@@ -1,0 +1,26 @@
+---
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  annotations:
+    #fabric8.io/app-menu: development
+    fabric8.io/iconUrl: "https://cdn.rawgit.com/nicolaferraro/fabric8-ipaas/oshinko/oshinko/src/main/fabric8/icon.png"
+  labels:
+    name: "oshinko-rest"
+    provider: "fabric8"
+    project: "${project.artifactId}"
+    version: "${project.version}"
+    group: "io.fabric8.ipaas.apps"
+    expose: "false"
+  name: "oshinko-rest"
+spec:
+  ports:
+  - name: o-rest-port
+    port: 8081
+    protocol: TCP
+    targetPort: 8081
+  selector:
+    name: oshinko-rest
+    project: "${project.artifactId}"
+    provider: "fabric8"
+    group: "io.fabric8.ipaas.apps"
